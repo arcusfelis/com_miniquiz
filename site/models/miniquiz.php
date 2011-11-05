@@ -71,7 +71,6 @@ class MiniquizModelMiniquiz extends JModel
 
 		$db->setQuery((string) $query);
 		
-		echo "Step 3";
 		$db->query();
 
 		$test = $db->loadResult();
