@@ -31,12 +31,11 @@ table#result_table
 <table id="result_table">
 <thead>
 <tr>
-	<td>Вопрос</td>
-	<td>Ответ A</td>
-	<td>Ответ B</td>
-	<td>Ответ C</td>
-	<td>Ответ D</td>
-	<td>Правильный ответ</td>
+	<th>Вопрос </th>
+	<th>Ответ A</th>
+	<th>Ответ B</th>
+	<th>Ответ C</th>
+	<th>Ответ D</th>
 </tr>
 </thead>
 <tbody>
@@ -50,17 +49,16 @@ global $items;
 if (is_array($items) && count($items)):
 	foreach ($items as $item):
 	echo '<tr>
-		<td>'. ($item->name) .'</td>
-		<td>'. ($item->varianta) .' ('.($item->varianta_count).' чел.)</td>
-		<td>'. ($item->variantb) .' ('.($item->variantb_count).' чел.)</td>
-		<td>'. ($item->variantc) .' ('.($item->variantc_count).' чел.)</td>
-		<td>'. ($item->variantd) .' ('.($item->variantd_count).' чел.)</td>
 		<td>' .
-
 		(($item->imageurl != "") 
-			? '<a class="modal" target="_BLANK" href="' . ($item->imageurl) . '">На картинке</a>'
-			: '')
+			? '<a class="modal" title="' . $item->imagedesc .'" 
+				target="_BLANK" href="' . ($item->imageurl) . '">'. ($item->name) .'</a>'
+			: $item->name)
 		. '</td>
+		<td>'. ($item->varianta) .'&nbsp;&ndash;&nbsp;'.($item->varianta_count).' </td>
+		<td>'. ($item->variantb) .'&nbsp;&ndash;&nbsp;'.($item->variantb_count).' </td>
+		<td>'. ($item->variantc) .'&nbsp;&ndash;&nbsp;'.($item->variantc_count).' </td>
+		<td>'. ($item->variantd) .'&nbsp;&ndash;&nbsp;'.($item->variantd_count).' </td>
 	</tr>';
 	endforeach;
 endif;

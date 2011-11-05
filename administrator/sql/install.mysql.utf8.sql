@@ -9,11 +9,12 @@ CREATE TABLE IF NOT EXISTS `#__miniquiz_question` (
 `variantb` VARCHAR(255)  NOT NULL ,
 `variantc` VARCHAR(255)  NOT NULL ,
 `variantd` VARCHAR(255)  NOT NULL ,
-`varianta_count` int(11) DEFAULT '1',
-`variantb_count` int(11) DEFAULT '1',
-`variantc_count` int(11) DEFAULT '1',
-`variantd_count` int(11) DEFAULT '1',
+`varianta_count` int(11) DEFAULT '0',
+`variantb_count` int(11) DEFAULT '0',
+`variantc_count` int(11) DEFAULT '0',
+`variantd_count` int(11) DEFAULT '0',
 `value` CHAR(1)  NOT NULL DEFAULT 'A',
+`imagedesc` VARCHAR(255)  NOT NULL DEFAULT '',
 `imageurl` VARCHAR(255) NOT NULL,
 PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT COLLATE=utf8_general_ci;

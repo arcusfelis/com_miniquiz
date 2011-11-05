@@ -6,31 +6,31 @@
                     readonly="true" class="readonly"
                     description="JGLOBAL_FIELD_ID_DESC" /> 
 
-       <field name="name" type="text" size="40" class="inputbox"
+       <field name="name" type="text" size="255" class="inputbox"
                  label="COM_MINIQUIZ_FORM_LBL_QUESTION_NAME" description="COM_MINIQUIZ_FORM_DESC_QUESTION_NAME" 
                 
                  required="true" 
                 filter="safehtml" /> 
 
-       <field name="varianta" type="text" size="40" class="inputbox"
+       <field name="varianta" type="text" size="255" class="inputbox"
                  label="COM_MINIQUIZ_FORM_LBL_QUESTION_VARIANTA" description="COM_MINIQUIZ_FORM_DESC_QUESTION_VARIANTA" 
                 
                  required="true" 
                 filter="safehtml" /> 
 
-       <field name="variantb" type="text" size="40" class="inputbox"
+       <field name="variantb" type="text" size="255" class="inputbox"
                  label="COM_MINIQUIZ_FORM_LBL_QUESTION_VARIANTB" description="COM_MINIQUIZ_FORM_DESC_QUESTION_VARIANTB" 
                 
                  required="true" 
                 filter="safehtml" /> 
 
-       <field name="variantc" type="text" size="40" class="inputbox"
+       <field name="variantc" type="text" size="255" class="inputbox"
                  label="COM_MINIQUIZ_FORM_LBL_QUESTION_VARIANTC" description="COM_MINIQUIZ_FORM_DESC_QUESTION_VARIANTC" 
                 
                  required="true" 
                 filter="safehtml" /> 
 
-       <field name="variantd" type="text" size="40" class="inputbox"
+       <field name="variantd" type="text" size="255" class="inputbox"
                  label="COM_MINIQUIZ_FORM_LBL_QUESTION_VARIANTD" description="COM_MINIQUIZ_FORM_DESC_QUESTION_VARIANTD" 
                 
                  required="true" 
@@ -50,6 +50,12 @@
 			hide_none="1" label="COM_MINIQUIZ_QUESTION_IMAGE_LABEL"
 			size="40"
 			description="COM_MINIQUIZ_QUESTION_IMAGE_LABEL" />
+
+       <field name="imagedesc" type="text" size="255" class="inputbox"
+                 label="COM_MINIQUIZ_FORM_LBL_QUESTION_IMAGE_DESC" description="COM_MINIQUIZ_FORM_LBL_QUESTION_IMAGE_DESC" 
+                
+                 required="false" 
+                filter="safehtml" /> 
 
          <field
                 name="state"

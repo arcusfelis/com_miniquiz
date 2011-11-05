@@ -62,6 +62,9 @@ JHtml::_('behavior.formvalidation');
 			<li><?php echo $this->form->getLabel('imageurl'); ?>
 			<?php echo $this->form->getInput('imageurl'); ?></li>
 			
+			<li><?php echo $this->form->getLabel('imagedesc'); ?>
+			<?php echo $this->form->getInput('imagedesc'); ?></li>
+			
             
 
             <li><?php echo $this->form->getLabel('state'); ?>
