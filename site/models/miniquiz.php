@@ -9,7 +9,6 @@
 
 // No direct access
 defined('_JEXEC') or die;
-echo "MQModel<br>";
 
 
 jimport('joomla.application.component.model');

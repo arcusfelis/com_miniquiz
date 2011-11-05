@@ -25,7 +25,8 @@ table#result_table
 </style>
 
 
-<center><h1><?php echo $answer_summary; ?></h1></center>
+<h1>Результаты викторины</h1>
+<center><h2><?php echo $answer_summary; ?></h2></center>
 
 <table id="result_table">
 <thead>
