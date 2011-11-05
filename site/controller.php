@@ -24,18 +24,16 @@ class MiniquizController extends JController
 
 	private function checkCookie()
 	{
-//	return true;
 		return !isset($_COOKIE['miniquiz_flag']);
 	}
 
 	private function checkAnswer()
 	{
-	//	if ((!isset($_POST['id'])) || (!isset($_POST['var'])))
-	//		return "";
+	    if ((!isset($_POST['id'])) || (!isset($_POST['var'])))
+	    	return "";
 
-	//	$id = $_POST['id'];
-	//	$var = $_POST['var'];
-		$id = '1'; $var = 'B';
+	    $id = $_POST['id'];
+	    $var = $_POST['var'];
 		$model = $this->getModel('Miniquiz','MiniquizModel');
 
 		setcookie('miniquiz_flag', 'true', time() + (72 * 3600));

@@ -34,16 +34,17 @@ class MiniquizModelMiniquiz extends JModel
 
 	function checkAnswer($id, $var)
 	{
-		echo "Step 1";
+		// sanitize data
 		$id = (int) $id;
 		if ((!is_string($var)) || (strlen($var) != 1))
 			return false;
-		echo "Step 2";
 		
 		$var = strtoupper($var);
 
 		if (!in_array($var, array('A', 'B', 'C', 'D')))
 			return false;
+
+
 
 		$f = "variant${var}_count";
 
@@ -52,7 +53,7 @@ class MiniquizModelMiniquiz extends JModel
 
 		$query->clear();
 
-		// update count
+		// update counters
 		$query->update('#__miniquiz_question');
 		$query->set("`$f` = (`$f` + 1)");
 		$query->where('id=' . $id);
@@ -61,6 +62,8 @@ class MiniquizModelMiniquiz extends JModel
 		$db->query();
 		$query->clear();
 
+
+		// Is the answer right?
 		$query->select('id');
 		$query->from('#__miniquiz_question');
 		$query->where('id=' . $id);

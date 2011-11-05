@@ -24,9 +24,9 @@ table#result_table
 -->
 </style>
 
+<center><h2><?php echo $answer_summary; ?></h2></center>
 
 <h1>Результаты викторины</h1>
-<center><h2><?php echo $answer_summary; ?></h2></center>
 
 <table id="result_table">
 <thead>
@@ -58,7 +58,7 @@ if (is_array($items) && count($items)):
 		<td>' .
 
 		(($item->imageurl != "") 
-			? '<a class="modal" href="' . ($item->imageurl) . '">На картинке</a>'
+			? '<a class="modal" target="_BLANK" href="' . ($item->imageurl) . '">На картинке</a>'
 			: '')
 		. '</td>
 	</tr>';
