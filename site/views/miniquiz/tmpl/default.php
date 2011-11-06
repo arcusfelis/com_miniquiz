@@ -27,6 +27,7 @@ table#result_table
 <center><h2><?php echo $answer_summary; ?></h2></center>
 
 <h1>Результаты викторины</h1>
+Правильный ответ вы найдете ниже в таблице результатов голосования, кликнув мышкой на вопрос.
 
 <table id="result_table">
 <thead>
@@ -52,7 +53,7 @@ if (is_array($items) && count($items)):
 		<td>' .
 		(($item->imageurl != "") 
 			? '<a class="modal" title="' . $item->imagedesc .'" 
-				target="_BLANK" href="' . ($item->imageurl) . '">'. ($item->name) .'</a>'
+				href="' . ($item->imageurl) . '">'. ($item->name) .'</a>'
 			: $item->name)
 		. '</td>
 		<td>'. ($item->varianta) .'&nbsp;&ndash;&nbsp;'.($item->varianta_count).' </td>

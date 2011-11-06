@@ -31,6 +31,8 @@ class MiniquizModelQuestions extends JModelList
 		$query = $db->getQuery(true);
 		// Select some fields
 		$query->select('*');
+		$query->where('state=1');
+		$query->order('ordering');
 		// From the hello table
 		$query->from('#__miniquiz_question');
 		return $query;
