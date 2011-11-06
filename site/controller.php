@@ -24,6 +24,7 @@ class MiniquizController extends JController
 
 	private function checkCookie()
 	{
+		return true;
 		return !isset($_COOKIE['miniquiz_flag']);
 	}
 
